@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PageSummarizer API</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Summarize Your Page With Few Clicks</h1>
+        <form action="{{ url_for('summarize')}}" method="POST">
+            <input type="text" name="pageurl" placeholder="Place your page URL" required="required" />
+            <input type="submit" class="btn btn-primary btn-block btn-large" value="Summarize">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div id="brandname">
+                Page Summarizer
+            </div>
+            <h2>Summary for the page</h2>
+
+        </div>
+    </header>
+    <p style="color:black;font-size:20;text-align: center;"><b>Results</b></p>
+    <div class="results">
+
+
+        <ol>
+            <!-- For loop logic of jinja template -->
+            {%for i in range(0, len)%}
+
+            <li style="color:white; font-size:20px">{{summary[i]}}</li>
+            {%endfor%}
+
+        </ol>
+
+    </div>
+
+</body>
+
+</html>
